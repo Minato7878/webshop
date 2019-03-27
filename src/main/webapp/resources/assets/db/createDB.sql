@@ -1,0 +1,44 @@
+DROP DATABASE IF EXISTS webshop;
+CREATE DATABASE IF NOT EXISTS webshop CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+CREATE USER IF NOT EXISTS 'root'@'%' IDENTIFIED BY 'root';
+GRANT ALL PRIVILEGES ON webshop . * TO 'root'@'%';
+FLUSH PRIVILEGES;
+
+USE webshop;
+SET SQL_SAFE_UPDATES = 0;
+
+CREATE TABLE IF NOT EXISTS `users` (
+`id` INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+`login` VARCHAR(20) NOT NULL,
+`password` VARCHAR(255) NOT NULL,
+`email` VARCHAR(255) NOT NULL,
+`first_name` VARCHAR(255) NOT NULL,
+`last_name` VARCHAR(255) NOT NULL,
+`date_of_birth` DATE NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS `orders` (
+`id` INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+`quantity` INT ,
+`product_id` INT NOT NULL,
+`user_id` INT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS `products` (
+`id` INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+`product_name` VARCHAR(255) NOT NULL,
+`product_desc` VARCHAR(255) NOT NULL,
+`product_price` DOUBLE,
+`img` VARCHAR(255)
+);
+
+CREATE TABLE IF NOT EXISTS `categories` (
+`product_id` INT NOT NULL,
+`category_name` VARCHAR(255) NOT NULL
+);
+
+ALTER TABLE orders ADD FOREIGN KEY (user_id) REFERENCES users(id);
+ALTER TABLE orders ADD FOREIGN KEY (product_id) REFERENCES products(id);
+
+ALTER TABLE categories ADD FOREIGN KEY (product_id) REFERENCES products(id);
+
