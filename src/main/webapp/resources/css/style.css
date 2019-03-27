@@ -1,0 +1,475 @@
+/*<editor-fold desc="Main">*/
+body {
+    background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+    background-size: 800% 800%;
+    -webkit-animation: Gradient 15s ease infinite;
+    -moz-animation: Gradient 15s ease infinite;
+    animation: Gradient 15s ease infinite;
+    color: white;
+}
+
+@-webkit-keyframes Gradient {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-moz-keyframes Gradient {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes Gradient {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+.alignR {
+    text-align: right;
+}
+
+.cntr {
+    text-align: center
+}
+
+ul.hr {
+    margin: 0;
+    padding: 4px;
+}
+
+ul.hr li {
+    display: inline;
+    margin-right: 5px;
+    padding: 3px;
+}
+
+.homCar {
+    overflow: hidden;
+}
+
+#myCarousel.homCar .item img {
+    width: 100%;
+    max-height: 400px
+}
+
+.homCar h4 {
+    background-color: #eb3f12;
+    color: #fff;
+    padding: 11px 4px;
+    font-size: 26px;
+    text-transform: uppercase;
+    float: left;
+    width: auto;
+    -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=65)';
+    opacity: 0.65;
+}
+
+.radio, .checkbox {
+    color: white;
+}
+
+.soften {
+    margin: 8px 0;
+    background: black;
+}
+
+.well-small, .well-large {
+    padding: 20px;
+    background-color: black;
+    color: white;
+}
+
+.well-small h3, h1 {
+    font-size: 18px;
+    line-height: 1.5em;
+    color: white;
+}
+
+.well {
+    background: black;
+}
+
+h1 small, h2 small, h3 small,
+h4 small, h5 small, h6 small {
+    color: white;
+}
+
+.carousel-caption {
+    background: transparent;
+}
+
+.thumbnail {
+    position: relative;
+}
+
+.tag {
+    background: url(../assets/img/new.png) no-repeat 0 0;
+    position: absolute;
+    display: block;
+    top: -4px;
+    right: -18px;
+    height: 48px;
+    width: 48px;
+}
+
+#newProductCar .carousel-control {
+    position: absolute;
+    top: -48px;
+    margin-top: 0;
+    width: 24px;
+    height: 24px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.5em;
+    color: #ffffff;
+    text-align: center;
+    background: #FFA300;
+    border: 0;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+}
+
+#newProductCar .carousel-control.right {
+    right: 8px;
+    left: auto;
+}
+
+#newProductCar .carousel-control.left {
+    right: 38px;
+    left: auto;
+}
+
+.zoomTool {
+    width: 120px;
+    height: 34px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 34px;
+    text-align: center;
+    color: #fff;
+    border-radius: 2px;
+    background: #f89406;
+    position: absolute;
+    left: 50%;
+    top: 44%;
+    margin-left: -60px;
+    z-index: 999;
+    display: none;
+}
+
+.zoomTool:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.row-fluid .text {
+    color: white;
+}
+
+.defaultBtn {
+    min-height: 34px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 34px;
+    text-align: center;
+    color: black;
+    border-radius: 2px;
+    background: white;
+    display: inline-block;
+    padding: 0 12px;
+    border: 0;
+    margin-right: 14px;
+}
+
+.thumbnail {
+    background: #fff
+}
+
+.thumbnail > a.overlay, .thumbnail > a.zoomTool {
+    display: none;
+}
+
+.shopBtn {
+    min-height: 34px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 34px;
+    text-align: center;
+    color: #fff;
+    border-radius: 2px;
+    background: #f89406;
+    display: inline-block;
+    padding: 0 12px;
+    border: 0;
+}
+
+.shopBtn:hover {
+    color: #fff;
+    text-decoration: none;
+    background: #F86706;
+}
+
+.gotop {
+    background-color: #000000;
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 0px 10px 5px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 30px;
+    line-height: 34px;
+}
+
+.gotop:hover {
+    color: #fff;
+    text-decoration: none;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+/*</editor-fold>*/
+
+/*<editor-fold desc="Header">*/
+.navbar-fixed-top {
+    padding: 0;
+    border-bottom: 1px solid #CCC;
+    background: #1b1b1b;
+}
+
+.navbar-fixed-top a {
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 8px 4px;
+}
+
+.navbar-fixed-top a:hover, .navbar-fixed-top a.active {
+    color: #fff;
+    background: #f89406;
+    text-decoration: none
+}
+/*</editor-fold>*/
+
+/*<editor-fold desc="Navigation Bar">*/
+.navbar {
+    padding-top: 70px;
+}
+
+.navbar-inner {
+    padding-left: 0;
+    padding-right: 0;
+    background: black;
+}
+
+.navbar .nav > li > a {
+    float: none;
+    padding: 10px 15px 10px;
+    color: white;
+    text-decoration: none;
+    text-shadow: 0 0px 0 #ffffff;
+}
+
+.navbar .nav > li > a:focus,
+.navbar .nav > li > a:hover {
+    color: orange;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.navbar .pull-right > li > .dropdown-menu,
+.navbar .nav > li > .dropdown-menu.pull-right {
+    right: 0;
+    left: auto;
+    border-radius: 0;
+    border-color: #ccc;
+    background-color: black
+}
+
+.navbar-search .search-query {
+    padding: 4px 14px;
+    -moz-border-radius: 1px;
+    -webkit-border-radius: 1px;
+    border-radius: 1px;
+    line-height: 1.5em;
+    min-width: 200px;
+}
+
+.navbar-search {
+    margin-left: 6px;
+}
+
+.loginedUser {
+    padding: 8px 4px;
+}
+
+.loginedUser .text {
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    padding: 8px 4px;
+}
+
+.icon-user {
+    color: #f89406;
+    padding: 2px 2px;
+}
+
+.icon-cog {
+    color: #f89406;
+    padding: 2px 2px;
+}
+
+.icon-signout {
+    color: #f89406;
+    padding: 2px 2px;
+}
+.accountForm .control-group{
+    margin: 10px;
+}
+
+.loginFrm {
+    margin-bottom: 8px;
+}
+
+.loginFrm .control-group {
+    padding: 8px 14px 0;
+    margin-bottom: 0;
+}
+
+.loginFrm .control-group .loggedUser a {
+    color: orange;
+}
+
+.shopBtn {
+    min-height: 34px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 34px;
+    text-align: center;
+    color: #fff;
+    border-radius: 2px;
+    background: #f89406;
+    display: inline-block;
+    padding: 0 12px;
+    border: 0;
+}
+
+.shopBtn:hover {
+    color: #fff;
+    text-decoration: none;
+    background: #F86706
+}
+/*</editor-fold>*/
+
+/*<editor-fold desc="Sidebar Main">*/
+#sidebar ul {
+    margin: 0;
+    padding: 20px;
+}
+
+#sidebar .nav-list li {
+    margin: 0;
+    padding: 5px;
+}
+
+#sidebar .nav a {
+    color: #ffffff;
+    background: transparent;
+}
+
+#sidebar .nav a:hover {
+    color: #f89406;
+}
+
+.categories {
+    text-align: right;
+    color: white;
+    font-size: 30px;
+    font-family: "Agency FB", serif;
+}
+/*</editor-fold>*/
+
+/*<editor-fold desc="Product">*/
+.table-striped
+tbody > tr:nth-child(odd) > td {
+    color: black;
+}
+/*</editor-fold>*/
+
+/*<editor-fold desc="ShopView">*/
+.row-fluid [class*="span4"] {
+    margin-left: 0;
+    margin-right: 8px;
+}
+/*</editor-fold>*/
+
+/*<editor-fold desc="Profile">*/
+.profile-item {
+    margin-top: 10px;
+}
+
+.profile-item .loggedUser {
+    color: #ff580b;
+}
+.profile-item .greetings-view-text {
+    font-size: 20px;
+}
+.profile-item .profile-greeting-text-item {
+    padding: 25px;
+}
+
+.profile-form-label {
+    font-size: 20px;
+}
+
+.user-view {
+    color: #ff580b;
+    font-size: 25px;
+}
+.profile-greeting-item {
+display: table;
+}
+
+.profile-avatar-block{
+    display: table-cell;
+}
+
+
+/*</editor-fold>*/
+
+/*<editor-fold desc="Sidebar Account">*/
+.account-menu-list > li {
+    font-size: 20px;
+    display: inline;
+    margin: 10px;
+}
+/*</editor-fold>*/
+/*<editor-fold desc="Management">*/
+.btn-group > .btn-light{
+    margin-right: 8px;
+}
+/*</editor-fold>*/
