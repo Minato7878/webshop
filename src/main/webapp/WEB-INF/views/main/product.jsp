@@ -76,10 +76,9 @@
                                     </select>
                                 </div>
                             </div>
-                            <h4>100 items in stock</h4>
+                            <h4>${product.quantity} items in stock</h4>
                             <p>
-                                Nowadays the lingerie industry is one of the most successful business spheres.
-                                Nowadays the lingerie industry is one of ...
+                                ${product.description}
                             <p>
                                 <a type="submit" class="shopBtn" href="${pageContext.request.contextPath}/order?id=${product.id}">
                                     <span class=" icon-shopping-cart"></span> Add to cart

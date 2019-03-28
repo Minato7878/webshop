@@ -250,6 +250,7 @@ h4 small, h5 small, h6 small {
     -webkit-border-radius: 10px;
     border-radius: 10px;
 }
+
 /*</editor-fold>*/
 
 /*<editor-fold desc="Header">*/
@@ -272,6 +273,7 @@ h4 small, h5 small, h6 small {
     background: #f89406;
     text-decoration: none
 }
+
 /*</editor-fold>*/
 
 /*<editor-fold desc="Navigation Bar">*/
@@ -347,7 +349,8 @@ h4 small, h5 small, h6 small {
     color: #f89406;
     padding: 2px 2px;
 }
-.accountForm .control-group{
+
+.accountForm .control-group {
     margin: 10px;
 }
 
@@ -383,6 +386,7 @@ h4 small, h5 small, h6 small {
     text-decoration: none;
     background: #F86706
 }
+
 /*</editor-fold>*/
 
 /*<editor-fold desc="Sidebar Main">*/
@@ -411,6 +415,7 @@ h4 small, h5 small, h6 small {
     font-size: 30px;
     font-family: "Agency FB", serif;
 }
+
 /*</editor-fold>*/
 
 /*<editor-fold desc="Product">*/
@@ -418,6 +423,7 @@ h4 small, h5 small, h6 small {
 tbody > tr:nth-child(odd) > td {
     color: black;
 }
+
 /*</editor-fold>*/
 
 /*<editor-fold desc="ShopView">*/
@@ -425,6 +431,7 @@ tbody > tr:nth-child(odd) > td {
     margin-left: 0;
     margin-right: 8px;
 }
+
 /*</editor-fold>*/
 
 /*<editor-fold desc="Profile">*/
@@ -435,9 +442,11 @@ tbody > tr:nth-child(odd) > td {
 .profile-item .loggedUser {
     color: #ff580b;
 }
+
 .profile-item .greetings-view-text {
     font-size: 20px;
 }
+
 .profile-item .profile-greeting-text-item {
     padding: 25px;
 }
@@ -450,11 +459,12 @@ tbody > tr:nth-child(odd) > td {
     color: #ff580b;
     font-size: 25px;
 }
+
 .profile-greeting-item {
-display: table;
+    display: table;
 }
 
-.profile-avatar-block{
+.profile-avatar-block {
     display: table-cell;
 }
 
@@ -467,9 +477,17 @@ display: table;
     display: inline;
     margin: 10px;
 }
+
 /*</editor-fold>*/
+
 /*<editor-fold desc="Management">*/
-.btn-group > .btn-light{
+.btn-group > .btn-light {
     margin-right: 8px;
 }
+
+/*</editor-fold>*/
+
+/*<editor-fold desc="Image Upload">*/
+
+
 /*</editor-fold>*/

@@ -10,6 +10,7 @@ public class User {
     private String firstName;
     private String lastName;
     private String dateOfBirth;
+    private String role;
 
     public User(){}
 
@@ -78,16 +79,25 @@ public class User {
         this.dateOfBirth = dateOfBirth;
     }
 
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
     @Override
     public String toString() {
         return "User{" +
-                "id=" + id +
+                "id='" + id + '\'' +
                 ", login='" + login + '\'' +
                 ", password='" + password + '\'' +
                 ", email='" + email + '\'' +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", dateOfBirth='" + dateOfBirth + '\'' +
+                ", role='" + role + '\'' +
                 '}';
     }
 

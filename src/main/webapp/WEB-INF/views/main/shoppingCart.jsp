@@ -53,11 +53,18 @@
                                 <br>Model : n/a
                                 <br>${order.product.description}
                             </td>
-                            <td><span class="shopBtn"><span class="icon-ok"></span></span></td>
+                            <td>
+                                <c:when test="${order.product.quantity>0}">
+                                <span class="shopBtn"><span class="icon-ok"></span></span>
+                                </c:when>
+                                <c:otherwise>
+                                    <span class="shopBtn"><span class="icon-remove"></span></span>
+                                </c:otherwise>
+                            </td>
                             <td>${order.product.price}$</td>
                             <td>
                                 <input class="span1" style="max-width:34px" placeholder="1" size="16" type="number"
-                                       value="${order.quantity}"
+                                       value="${order.quantity}" min="1" max="${order.product.quantity}"
                                        id="${order.product.id}-quantity"
                                        onclick="countPrice(<c:out value="${order.product.id}"/>,
                                            <c:out value="${order.product.price}"/>,

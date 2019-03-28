@@ -52,6 +52,7 @@ public class UserDaoImpl implements UserDAO {
             user.setFirstName(rs.getString("first_name"));
             user.setLastName(rs.getString("last_name"));
             user.setDateOfBirth(rs.getDate("date_of_birth").toString());
+            user.setRole(rs.getString("role"));
             pstm.close();
             return user;
         }
@@ -78,8 +79,8 @@ public class UserDaoImpl implements UserDAO {
 
     @Override
     public void update(User user) throws SQLException {
-        String sql = "INSERT INTO users (login, email, password, first_name, last_name, date_of_birth)"//
-                + " VALUES (?,?,?,?,?,?)";
+        String sql = "INSERT INTO users (login, email, password, first_name, last_name, date_of_birth, role)"//
+                + " VALUES (?,?,?,?,?,?,?)";
 
         PreparedStatement pstm = conn.prepareStatement(sql);
         pstm.setString(1, user.getLogin());
@@ -88,6 +89,7 @@ public class UserDaoImpl implements UserDAO {
         pstm.setString(4, user.getFirstName());
         pstm.setString(5, user.getLastName());
         pstm.setString(6, user.getDateOfBirth());
+        pstm.setString(6, user.getRole());
         pstm.execute();
         pstm.close();
     }

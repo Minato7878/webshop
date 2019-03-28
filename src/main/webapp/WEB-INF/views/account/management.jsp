@@ -26,7 +26,7 @@
         <div class="span9">
             <div class="well well-small">
                 <table>
-                    <a class="btn btn-warning pull-right" href="${pageContext.request.contextPath}/add">
+                    <a class="btn btn-warning pull-right" href="${pageContext.request.contextPath}/add_product">
                         <span class="icon-plus"> Add New Product</span>
                     </a>
                     <h1>My Products</h1>
@@ -50,10 +50,10 @@
                                         <form class="form-horizontal qtyFrm">
                                             <h3> ${product.price}$</h3>
                                             <div class="btn-group">
-                                                <a href="${pageContext.request.contextPath}/order?id=${product.id}"
+                                                <a href="${pageContext.request.contextPath}/edit_product?productId=${product.id}"
                                                    class="btn btn-light">
                                                     <span class="icon-edit"></span>Edit</a>
-                                                <a href="${pageContext.request.contextPath}/product?id=${product.id}"
+                                                <a href="${pageContext.request.contextPath}/remove_product?productId=${product.id}"
                                                    class="btn btn-danger">
                                                     <span class="icon-remove"></span>Remove</a>
                                             </div>

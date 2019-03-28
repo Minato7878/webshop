@@ -6,14 +6,16 @@ public class Product {
     private String id;
     private String name;
     private String description;
+    private String quantity;
     private double price;
     private String imgUrl;
 
     public Product() {}
 
-    public Product(String name, String description, double price, String imgUrl) {
+    public Product(String name, String description, String quantity, double price, String imgUrl) {
         this.name = name;
         this.description = description;
+        this.quantity = quantity;
         this.price = price;
         this.imgUrl = imgUrl;
     }
@@ -58,12 +60,21 @@ public class Product {
         this.imgUrl = imgUrl;
     }
 
+    public String getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(String quantity) {
+        this.quantity = quantity;
+    }
+
     @Override
     public String toString() {
         return "Product{" +
-                "id=" + id +
+                "id='" + id + '\'' +
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
+                ", quantity='" + quantity + '\'' +
                 ", price=" + price +
                 ", imgUrl='" + imgUrl + '\'' +
                 '}';
@@ -78,11 +89,12 @@ public class Product {
                 Objects.equals(id, product.id) &&
                 Objects.equals(name, product.name) &&
                 Objects.equals(description, product.description) &&
+                Objects.equals(quantity, product.quantity) &&
                 Objects.equals(imgUrl, product.imgUrl);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, description, price, imgUrl);
+        return Objects.hash(id, name, description, quantity, price, imgUrl);
     }
 }

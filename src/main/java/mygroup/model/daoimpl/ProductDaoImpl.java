@@ -48,6 +48,7 @@ public class ProductDaoImpl implements ProductDAO {
             product.setName(rs.getString("product_name"));
             product.setDescription(rs.getString("product_desc"));
             product.setPrice(rs.getDouble("product_price"));
+            product.setQuantity(String.valueOf(rs.getInt("product_quantity")));
             product.setImgUrl(rs.getString("img"));
             pstm.close();
             return product;
@@ -93,14 +94,15 @@ public class ProductDaoImpl implements ProductDAO {
 
     @Override
     public void update(Product product) throws SQLException {
-        String sql = "INSERT INTO products (product_name, product_desc, product_price,img)"//
-                + " VALUES (?,?,?,?)";
+        String sql = "INSERT INTO products (product_name, product_desc, product_price, product_quantity, img)"//
+                + " VALUES (?,?,?,?,?)";
 
         PreparedStatement pstm = conn.prepareStatement(sql);
         pstm.setString(1, product.getName());
         pstm.setString(2, product.getDescription());
         pstm.setDouble(3, product.getPrice());
-        pstm.setString(4, product.getImgUrl());
+        pstm.setString(4, product.getQuantity());
+        pstm.setString(5, product.getImgUrl());
         pstm.execute();
         pstm.close();
     }
@@ -110,6 +112,8 @@ public class ProductDaoImpl implements ProductDAO {
         String sql = "DELETE FROM products" //
                 + " where id = ?";
 
+        CategoryDaoImpl categoryDao = new CategoryDaoImpl(conn);
+        categoryDao.deleteFromProduct(id);
         PreparedStatement pstm = conn.prepareStatement(sql);
         pstm.setString(1, id);
         pstm.execute();
